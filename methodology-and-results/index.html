@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Methodology and results - HMAX documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Methodology and results";
+    var mkdocs_page_input_path = "methodology-and-results.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> HMAX documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../installation/">Installation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../get-started/">Get started</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../indeep/">In deep</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Methodology and results</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#methodology-and-results">Methodology and results</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#comparaison-with-serre-et-al-algorithm-caltech-20">Comparaison with Serre et al. algorithm - Caltech 20</a></li>
+        
+            <li><a class="toctree-l3" href="#comparaison-with-serre-et-al-algorithm-caltech-101">Comparaison with Serre et al. algorithm - Caltech 101</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../visualisation/">Visualisation</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">HMAX documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Methodology and results</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="methodology-and-results">Methodology and results</h1>
+<p>The HMAX efficiency and its differents extensions available in litterature are compare throught the Caltech101 dataset, which you can find <a href="http://www.vision.caltech.edu/Image_Datasets/Caltech101/">here</a>.
+This dataset contains 102 categories, each one including between 31 and more than 800 images.</p>
+<p>As we want a multiclass classifier, we need a balanced dataset. That's why we only take the firts 31 images for all the categories.</p>
+<p>For the HMAX training, we take the first 15 images of each categories, due to Serre et al. implementation. This is an issue because half of our testing images are present in the training stage.<br />
+That's why in a second time, we created an alternative dataset in witch training images were taken randomly in the complete dataset.</p>
+<p>HMAX is demanding in ressources and in time and in order to quickly test the algorithm in a reasonable amount of time, so we created a subset dataset that we called Caltech 20. It contains theses categories:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Airplanes</td>
+<td>Electric guitar</td>
+<td>Hedgehog</td>
+<td>Minaret</td>
+</tr>
+<tr>
+<td>Binocular</td>
+<td>Emu</td>
+<td>Joshua tree</td>
+<td>Pigeon</td>
+</tr>
+<tr>
+<td>Chandelier</td>
+<td>Faces</td>
+<td>Laptop</td>
+<td>Rooster</td>
+</tr>
+<tr>
+<td>Dolphin</td>
+<td>Gerenuk</td>
+<td>Mandolin</td>
+<td>Sea horse</td>
+</tr>
+<tr>
+<td>Strawberry</td>
+<td>Trilobite</td>
+<td>Water lilly</td>
+<td>Windsor chair</td>
+</tr>
+</tbody>
+</table>
+<h2 id="comparaison-with-serre-et-al-algorithm-caltech-20">Comparaison with Serre et al. algorithm - Caltech 20</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Renoult et al.</th>
+<th>Serre et al.</th>
+<th>Renoult et al.</th>
+<th>Serre et al.</th>
+<th>Renoult et al.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Engine</td>
+<td>Classic</td>
+<td>Gray</td>
+<td>Color</td>
+<td>Color DO</td>
+<td>Sparse coding</td>
+</tr>
+<tr>
+<td>Correct classification rate</td>
+<td>57.14%</td>
+<td>58.57%</td>
+<td>64.29%</td>
+<td>50.71%</td>
+<td>45.71%</td>
+</tr>
+<tr>
+<td>Execution time</td>
+<td>57m25s</td>
+<td>1h16m16s</td>
+<td>13h28m22s</td>
+<td>11h09m34s</td>
+<td>2h48m00s</td>
+</tr>
+</tbody>
+</table>
+<h2 id="comparaison-with-serre-et-al-algorithm-caltech-101">Comparaison with Serre et al. algorithm - Caltech 101</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Renoult et al.</th>
+<th>Serre et al.</th>
+<th>Renoult et al.</th>
+<th>Serre et al.</th>
+<th>Renoult et al.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Engine</td>
+<td>Classic</td>
+<td>Gray</td>
+<td>Color</td>
+<td>Color DO</td>
+<td>Sparse coding</td>
+</tr>
+<tr>
+<td>Correct classification rate</td>
+<td>31.79%</td>
+<td>27.45%</td>
+<td>29.55%</td>
+<td>25.63%</td>
+<td>--.--%</td>
+</tr>
+<tr>
+<td>Execution time</td>
+<td>4h38m33s</td>
+<td>6h4m8s</td>
+<td>2d21h22m2s</td>
+<td>2d4h11m30s</td>
+<td>-h--m--s</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../visualisation/" class="btn btn-neutral float-right" title="Visualisation">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../indeep/" class="btn btn-neutral" title="In deep"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../indeep/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../visualisation/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

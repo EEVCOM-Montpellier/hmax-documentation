@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Get started - HMAX documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Get started";
+    var mkdocs_page_input_path = "get-started.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> HMAX documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../installation/">Installation</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Get started</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#get-started">Get started</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#prepare-your-dataset">Prepare your dataset</a></li>
+        
+            <li><a class="toctree-l3" href="#quick-start">Quick start</a></li>
+        
+            <li><a class="toctree-l3" href="#machine-learning">Machine Learning</a></li>
+        
+            <li><a class="toctree-l3" href="#go-further">Go further</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../indeep/">In deep</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../methodology-and-results/">Methodology and results</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../visualisation/">Visualisation</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">HMAX documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Get started</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="get-started">Get started</h1>
+<p>This section will show you how run the code for a classification.</p>
+<h2 id="prepare-your-dataset">Prepare your dataset</h2>
+<p>First of all, you must prepare your dataset.<br />
+HMAX require a training step, so you must have a training and a testing dataset.</p>
+<p>We recommand to have at least 15 images per class to train the model.</p>
+<p>In your test dataset, you must have one folder per class, with your images in it.</p>
+<h2 id="quick-start">Quick start</h2>
+<p>This will show you how to run HMAX with the default configuration. Computations are not parallized or putted on the GPU.<br />
+You should do this on a small dataset first as it can take some time.</p>
+<p>1 . Open the project with Matlab.</p>
+<p>2 . Then, you need to train the model with the dataset you have prepared</p>
+<pre><code class="matlab">hmax('../dataset/train/', 'Train', true);
+</code></pre>
+
+<p>3 . Run it on your test dataset</p>
+<pre><code class="matlab">hmax('../dataset/test/');
+</code></pre>
+
+<p>This will read recursively the <code>../dataset/test/</code> folder architecture and create a similar one in the <code>./result</code> folder.<br />
+Each images will give a Matlab binary file containing the HMAX encoding.</p>
+<p>4 . If your folders are named corresponding to the class name of the images, then you can run the following command:</p>
+<pre><code class="matlab">T = classifier.loadC2s('./results/');
+</code></pre>
+
+<p>Where <code>T</code> is a table containing HMAX encodings with corresponding labels.</p>
+<h2 id="machine-learning">Machine Learning</h2>
+<p>Once you've done the step <code>4.</code>, you can use the data in a Machine Learning tool.<br />
+The recommandation is to split the data (<code>T</code>) in two, one with <em>80%</em> of the observations for training and the other with the rest of the <em>20%</em> for validation.  </p>
+<pre><code class="matlab">[Ttrain Ttest] = classifier.splitdata(T, 0.8);
+</code></pre>
+
+<p>Then, you can use the Classification Learner toolbox to create a model.<br />
+For our tests, we used a Linear SVM without PCA.</p>
+<p>Finally, we can test our model</p>
+<pre><code class="matlab">averagePrecision = classifier.runtest(trainedModel, Ttest)
+</code></pre>
+
+<h2 id="go-further">Go further</h2>
+<p>Now that you know how to run HMAX, we will see how to run the code with GPU, parallel computing, with your own parameters, etc ...</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../indeep/" class="btn btn-neutral float-right" title="In deep">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../installation/" class="btn btn-neutral" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../installation/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../indeep/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
