@@ -1,0 +1,16 @@
+site_name: HMAX documentation
+pages:
+  - Home: index.md
+  - Installation: installation.md
+  - 'Get started': get-started.md
+  - 'In deep': indeep.md
+  - 'Methodology and results': methodology-and-results.md
+  - Visualisation: visualisation.md
+theme:
+  name: readthedocs
+markdown_extensions:
+  - admonition
+  - footnotes
+  - pymdownx.arithmatex
+extra_javascript:
+  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'
