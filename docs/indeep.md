@@ -40,7 +40,7 @@ But as we give the value `true` as an argument, it will overrive the default val
 | FiltersSizes              |                                     | Integer[]          | `[4, 8, 12, 16]`             |
 | MaxPoolingSizes           | Size of the max pooling             | Integer[]          | `[8, 8, 10, 10, ..., 22]`    |
 | ColorNbChannels           | Number of color channels            | Integer            | `4`                          |
-| SparseCodingFilterSize                                          | Integer            | `12`                         |
+| SparseCodingFilterSize    |                                     | Integer            | `12`                         |
 | SparseCodingNbPatches     |                                     | Integer            | `10000`                      |
 | SparseCodingBatchSize     |                                     | Integer            | `1000`                       |
 | SparseCodingNbIterations  |                                     | Integer            | `2`                          |
@@ -49,21 +49,20 @@ But as we give the value `true` as an argument, it will overrive the default val
 | Train                     | Train the model                     | Boolean            | `false`                      |
 
 
-
 ### Engine 
-**classic**, **sparseCoding**, **color** or **sparseColor**
+Choose between: **classic**, **sparseCoding**, **color** or **sparseColor**
 
 ### ImageSize
 The programm will alway resize input images, so the size will be uniform. Bigger they are, slower the execution will be.
 
-### Gabor.EffectiveWidt
-`[2.8, 3.6, 4.5, 5.4, 6.3, 7.3, 8.2, 10.2, 11.3, 13.3, 14.6, 15.8, 17.0, 18.2]`
+### GaborEffectiveWidt
+Default values: `[2.8, 3.6, 4.5, 5.4, 6.3, 7.3, 8.2, 9.2, 10.2, 11.3, 12.3, 13.4, 14.6, 15.8, 17.0, 18.2]`
 
-### Gabor.Wavelength
-`[3.5, 4.6, 5.6, 6.8, 7.9, 9.1, 10.3, 11.5, 12.7, 14.1, 15.4, 16.8, 18.2, 19.7, 21.2, 22.8]`
+### GaborWavelength
+Default values: `[3.5, 4.6, 5.6, 6.8, 7.9, 9.1, 10.3, 11.5, 12.7, 14.1, 15.4, 16.8, 18.2, 19.7, 21.2, 22.8]`
 
-### Gabor.FilterSizes
-`[7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39]`
+### GaborFilterSizes
+Default values: `[7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37]`
 
 ### MaxPoolingSizes
-`[8, 8, 10, 10, 12, 12, 14, 14, 16, 16, 18, 18, 20, 20, 22, 22]` 
+Default values: `[8, 8, 10, 10, 12, 12, 14, 14, 16, 16, 18, 18, 20, 20, 22, 22]` 
