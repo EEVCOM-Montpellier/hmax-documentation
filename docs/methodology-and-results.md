@@ -1,14 +1,14 @@
 # Methodology and results
 
-The HMAX efficiency and its differents extensions available in litterature are compare throught the Caltech101 dataset, which you can find [here](http://www.vision.caltech.edu/Image_Datasets/Caltech101/).
+The HMAX efficiency and its different extensions available in literature are compare through the Caltech101 dataset, which you can find [here](http://www.vision.caltech.edu/Image_Datasets/Caltech101/).
 This dataset contains 102 categories, each one including between 31 and more than 800 images.
 
-As we want a multiclass classifier, we need a balanced dataset. That's why we only take the firts 31 images for all the categories.
+As we want a multi-class classifier, we need a balanced dataset. That's why we only take the first 31 images for all the categories.
 
 For the HMAX training, we take the first 15 images of each categories, due to Serre et al. implementation. This is an issue because half of our testing images are present in the training stage.  
 That's why in a second time, we created an alternative dataset in witch training images were taken randomly in the complete dataset.
 
-HMAX is demanding in ressources and in time and in order to quickly test the algorithm in a reasonable amount of time, so we created a subset dataset that we called Caltech 20. It contains theses categories:
+HMAX is demanding in resources and in time and in order to quickly test the algorithm in a reasonable amount of time, so we created a subset dataset that we called Caltech 20. It contains theses categories:
 
 |            |                 |             |               |
 |------------|-----------------|-------------|---------------|
@@ -18,7 +18,7 @@ HMAX is demanding in ressources and in time and in order to quickly test the alg
 | Dolphin    | Gerenuk         | Mandolin    | Sea horse     |
 | Strawberry | Trilobite       | Water lilly | Windsor chair |
 
-## Comparaison with Serre et al. algorithm - Caltech 20
+## Comparison with Serre et al. algorithm - Caltech 20
 
 |                             | Renoult et al. | Serre et al. | Renoult et al. | Serre et al. | Renoult et al. |
 |-----------------------------|----------------|--------------|----------------|--------------|----------------|
@@ -26,7 +26,7 @@ HMAX is demanding in ressources and in time and in order to quickly test the alg
 | Correct classification rate | 57.14%         | 58.57%       | 64.29%         | 50.71%       | 45.71%         |
 | Execution time              | 57m25s         | 1h16m16s     | 13h28m22s      | 11h09m34s    | 2h48m00s        |
 
-## Comparaison with Serre et al. algorithm - Caltech 101
+## Comparison with Serre et al. algorithm - Caltech 101
 
 |                             | Renoult et al. | Serre et al. | Renoult et al. | Serre et al. | Renoult et al. |
 |-----------------------------|----------------|--------------|----------------|--------------|----------------|

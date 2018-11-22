@@ -14,20 +14,14 @@ In order to contribute, you need to have the following installed:
 | MkDocs             | ≥ 0.17.4       |
 | PyMdown Extensions | ≥ 4.11.        |
 
-[Pipenv](https://docs.pipenv.org/) is recommanded but not required.
-
 1. Install [Python](https://www.python.org) on your computer
 2. In a terminal, use `pip` to install MkDocs:
     ```bash
     pip install mkdocs
-    # Or
-    pipenv install mkdocs
     ```
 3. In the same way, install PyMdown Extensions
     ```bash
     pip install pymdown-extensions
-    # Or
-    pipenv install pymdown-extensions
     ```
 
 Preview

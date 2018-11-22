@@ -7,13 +7,13 @@ This section will show you how run the code for a classification.
 First of all, you must prepare your dataset.  
 HMAX require a training step, so you must have a training and a testing dataset.
 
-We recommand to have at least 15 images per class to train the model.
+We recommend to have at least 15 images per class to train the model.
 
 In your test dataset, you must have one folder per class, with your images in it.
 
 ## Quick start
 
-This will show you how to run HMAX with the default configuration. Computations are not parallized or putted on the GPU.  
+This will show you how to run HMAX with the default configuration. Computations are not paralyzed or putted on the GPU.  
 You should do this on a small dataset first as it can take some time.
 
 1 . Open the project with Matlab.
@@ -41,7 +41,7 @@ Where `T` is a table containing HMAX encodings with corresponding labels.
 ## Machine Learning
 
 Once you've done the step `4.`, you can use the data in a Machine Learning tool.  
-The recommandation is to split the data (`T`) in two, one with *80%* of the observations for training and the other with the rest of the *20%* for validation.  
+The recommendation is to split the data (`T`) in two, one with *80%* of the observations for training and the other with the rest of the *20%* for validation.  
 
 ```matlab
 [Ttrain Ttest] = classifier.splitdata(T, 0.8);

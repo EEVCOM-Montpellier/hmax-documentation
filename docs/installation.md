@@ -8,7 +8,7 @@ Plus, in order to run HMAX, you must have theses Toolboxes:
 |----------------------------------------------------------|
 | Matlab >2017                                             |
 | Optimization toolbox                                     |
-| Parallel Computing Toolbox (optionnal)                   |
+| Parallel Computing Toolbox (optional)                   |
 | Global Optimization Toolbox (sparse coding only)         |
 | Statistics and Machine Learning Toolbox (classification) |
 

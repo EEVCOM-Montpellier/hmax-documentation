@@ -20,14 +20,14 @@ That's why in the [Get started](/get-started) section, we wrote this:
 hmax('../dataset/train/', 'Train', true);
 ```
 The `Train` parameters is set to `false` internally and in the default configuration file.  
-But as we give the value `true` as an argument, it will overrive the default value.
+But as we give the value `true` as an argument, it will override the default value.
 
 ## Avalaible parameters
 
 | Name                      | Description                         | Type expected      | Default value                |
 |---------------------------|-------------------------------------|--------------------|------------------------------|
 | ConfigurationFile         | Custom configuration file           | String - JSON file | `"./defaultParameters.json"` |
-| Ouput                     | Custom output directo               | String - Directory | `"./results"`                |
+| Output                    | Custom output directory             | String - Directory | `"./results"`                |
 | GPU                       | Use GPU for computation             | Boolean            | `false`                      |
 | Parallel                  | Use parallel computing              | Boolean            | `false`                      |
 | Engine                    | Specify an algorithm to use         | String             | `"sparseCodingColor"`              |
@@ -35,7 +35,7 @@ But as we give the value `true` as an argument, it will overrive the default val
 | GaborNbOrientations       |                                     | Integer            | `4`                          |
 | GaborAspectRatio          | Aspect ratio of Gabor filters       | Float              | `0.3`                        |
 | GaborEffectiveWidth       | Width of Gabor filters              | Float[]            | `[2.8, 3.6, 4.5, ..., 18.2]` |
-| GaborWavelength           | Wavelenght of Gabor filters         | Float[]            | `[3.5, 4.6, 5.6, ..., 22.8]` |
+| GaborWavelength           | Wavelength of Gabor filters         | Float[]            | `[3.5, 4.6, 5.6, ..., 22.8]` |
 | GaborSizes                | Sizes of Gabor filters              | Integer[]          | `[7, 9, 11, 13, ..., 39]`    |
 | FiltersSizes              |                                     | Integer[]          | `[4, 8, 12, 16]`             |
 | MaxPoolingSizes           | Size of the max pooling             | Integer[]          | `[8, 8, 10, 10, ..., 22]`    |
@@ -53,9 +53,9 @@ But as we give the value `true` as an argument, it will overrive the default val
 Choose between: **classic**, **sparseCoding**, **color** or **sparseColor**
 
 ### ImageSize
-The programm will alway resize input images, so the size will be uniform. Bigger they are, slower the execution will be.
+The program will alway resize input images, so the size will be uniform. Bigger they are, slower the execution will be.
 
-### GaborEffectiveWidt
+### GaborEffectiveWidth
 Default values: `[2.8, 3.6, 4.5, 5.4, 6.3, 7.3, 8.2, 9.2, 10.2, 11.3, 12.3, 13.4, 14.6, 15.8, 17.0, 18.2]`
 
 ### GaborWavelength
