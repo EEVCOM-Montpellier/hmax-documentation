@@ -1,15 +1,11 @@
 # Get started
 
-This section will show you how run the code for a classification.
+This section will show you how to run the code to classify images.
 
 ## Prepare your dataset
 
-First of all, you must prepare your dataset.  
-HMAX require a training step, so you must have a training and a testing dataset.
-
-We recommend to have at least 15 images per class to train the model.
-
-In your test dataset, you must have one folder per class, with your images in it.
+First, you must prepare your dataset.  
+HMAX requires a learning step during which filter selectivities are learned. You thus need to have a learning dataset, which can be different (or not) from the encoding dataset. The encoding dataset includes images that you want to encode using HMAX with learned filters.
 
 ## Quick start
 
