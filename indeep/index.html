@@ -198,7 +198,7 @@ Setting the parameter to <code>true</code> will override the default value.</p>
 </tr>
 <tr>
 <td>GaborAspectRatio</td>
-<td>Aspect ratio of Gabor filters</td>
+<td>Spatial aspect ratio of Gabor filters</td>
 <td>Float</td>
 <td><code>0.3</code></td>
 </tr>
@@ -283,9 +283,9 @@ Setting the parameter to <code>true</code> will override the default value.</p>
 </tbody>
 </table>
 <h3 id="engine">Engine</h3>
-<p>Choose between: <strong>classic</strong>, <strong>sparseCoding</strong>, <strong>color</strong> or <strong>sparseColor</strong></p>
+<p>Choose between: <strong>classic</strong> (HMAX with greyscale images), <strong>sparseCoding</strong> (HMAX with sparse coding), <strong>color</strong> (HMAX with colour images) or <strong>sparseColor</strong> (HMAX with sparse coding on colour images)</p>
 <h3 id="imagesize">ImageSize</h3>
-<p>The program will alway resize input images, so the size will be uniform. Bigger they are, slower the execution will be.</p>
+<p>Input images are resized to have their smallest side equal to the defined value keeping aspect ration constant. Large images increase computation time.</p>
 <h3 id="gaboreffectivewidth">GaborEffectiveWidth</h3>
 <p>Default values: <code>[2.8, 3.6, 4.5, 5.4, 6.3, 7.3, 8.2, 9.2, 10.2, 11.3, 12.3, 13.4, 14.6, 15.8, 17.0, 18.2]</code></p>
 <h3 id="gaborwavelength">GaborWavelength</h3>
