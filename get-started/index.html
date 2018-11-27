@@ -129,12 +129,10 @@
             <div class="section">
               
                 <h1 id="get-started">Get started</h1>
-<p>This section will show you how run the code for a classification.</p>
+<p>This section will show you how to run the code to classify images.</p>
 <h2 id="prepare-your-dataset">Prepare your dataset</h2>
-<p>First of all, you must prepare your dataset.<br />
-HMAX require a training step, so you must have a training and a testing dataset.</p>
-<p>We recommend to have at least 15 images per class to train the model.</p>
-<p>In your test dataset, you must have one folder per class, with your images in it.</p>
+<p>First, you must prepare your dataset.<br />
+HMAX requires a learning step during which filter selectivities are learned. You thus need to have a learning dataset, which can be different (or not) from the encoding dataset. The encoding dataset includes images that you want to encode using HMAX with learned filters.</p>
 <h2 id="quick-start">Quick start</h2>
 <p>This will show you how to run HMAX with the default configuration. Computations are not paralyzed or putted on the GPU.<br />
 You should do this on a small dataset first as it can take some time.</p>
