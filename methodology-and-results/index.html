@@ -77,9 +77,9 @@
     
         <ul>
         
-            <li><a class="toctree-l3" href="#comparison-with-serre-et-al-algorithm-caltech-20">Comparison with Serre et al. algorithm - Caltech 20</a></li>
+            <li><a class="toctree-l3" href="#results-caltech-20">Results - Caltech 20</a></li>
         
-            <li><a class="toctree-l3" href="#comparison-with-serre-et-al-algorithm-caltech-101">Comparison with Serre et al. algorithm - Caltech 101</a></li>
+            <li><a class="toctree-l3" href="#results-caltech-101">Results - Caltech 101</a></li>
         
         </ul>
     
@@ -125,56 +125,21 @@
             <div class="section">
               
                 <h1 id="performance-test-with-caltech101">Performance test with Caltech101</h1>
-<p>We compared our version of HMAX (Renoult et al. 2019) to that provided by Thomas Serre's Lab, available here:</p>
-<p>of efficiency and its different extensions available in literature are compare through the Caltech101 dataset, which you can find <a href="http://www.vision.caltech.edu/Image_Datasets/Caltech101/">here</a>.
-This dataset contains 102 categories, each one including between 31 and more than 800 images.</p>
-<p>As we want a multi-class classifier, we need a balanced dataset. That's why we only take the first 31 images for all the categories.</p>
-<p>For the HMAX training, we take the first 15 images of each categories, due to Serre et al. implementation. This is an issue because half of our testing images are present in the training stage.<br />
-That's why in a second time, we created an alternative dataset in witch training images were taken randomly in the complete dataset.</p>
-<p>HMAX is demanding in resources and in time and in order to quickly test the algorithm in a reasonable amount of time, so we created a subset dataset that we called Caltech 20. It contains theses categories:</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Airplanes</td>
-<td>Electric guitar</td>
-<td>Hedgehog</td>
-<td>Minaret</td>
-</tr>
-<tr>
-<td>Binocular</td>
-<td>Emu</td>
-<td>Joshua tree</td>
-<td>Pigeon</td>
-</tr>
-<tr>
-<td>Chandelier</td>
-<td>Faces</td>
-<td>Laptop</td>
-<td>Rooster</td>
-</tr>
-<tr>
-<td>Dolphin</td>
-<td>Gerenuk</td>
-<td>Mandolin</td>
-<td>Sea horse</td>
-</tr>
-<tr>
-<td>Strawberry</td>
-<td>Trilobite</td>
-<td>Water lilly</td>
-<td>Windsor chair</td>
-</tr>
-</tbody>
-</table>
-<h2 id="comparison-with-serre-et-al-algorithm-caltech-20">Comparison with Serre et al. algorithm - Caltech 20</h2>
+<p>We compared our version of HMAX (Renoult et al. 2019) to that provided by Thomas Serre's Lab, available here:
+<a href="https://github.com/serre-lab/color_hmax">https://github.com/serre-lab/color_hmax</a></p>
+<p>Comparisons were made on a classification task using the Caltech101 dataset, available <a href="http://www.vision.caltech.edu/Image_Datasets/Caltech101/">here</a>.
+This dataset contains 102 categories, which include between 31 and more than 800 images.</p>
+<p>Analyses were performed with the 102 categories, and with a reduced database of only 20 categories. 
+The Caltech20 dataset contained the following categories:
+|            |                 |             |               |
+|------------|-----------------|-------------|---------------|
+| Airplanes  | Electric guitar | Hedgehog    | Minaret       |
+| Binocular  | Emu             | Joshua tree | Pigeon        |
+| Chandelier | Faces           | Laptop      | Rooster       |
+| Dolphin    | Gerenuk         | Mandolin    | Sea horse     |
+| Strawberry | Trilobite       | Water lilly | Windsor chair |</p>
+<p>Images were resized to 140 pix for the smallest side, keeping the aspect ratio unchanged. We used 15 images per category to first learn the set of S2 filters, extracting 1,000 filters from C1 with HMAX and 4,000 filters with colour HMAX (1,000 for each DO channel), and learning 250 filters with sparse-HMAX (both greyscale and colour versions). Note that, in order to compare our results to those of previous studies, we used a red-cyan opponent channel in addition to the yellow-blue, red-green and achromatic channels (Zhang et al., 2012). For the classification task, we randomly selected 31 pictures from each of the 102 categories and encoded them with the previously learned HMAX models. Among these 31 pictures, 25 were used for training the classifier and six for testing. The multiclass classifier consisted of 102 binary linear Support Vector Machines (one per category). During training, we applied a cross-validation procedure with five clusters to limit over-fitting.</p>
+<h2 id="results-caltech-20">Results - Caltech 20</h2>
 <table>
 <thead>
 <tr>
@@ -213,7 +178,7 @@ That's why in a second time, we created an alternative dataset in witch training
 </tr>
 </tbody>
 </table>
-<h2 id="comparison-with-serre-et-al-algorithm-caltech-101">Comparison with Serre et al. algorithm - Caltech 101</h2>
+<h2 id="results-caltech-101">Results - Caltech 101</h2>
 <table>
 <thead>
 <tr>
