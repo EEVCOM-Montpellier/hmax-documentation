@@ -125,24 +125,24 @@
             <div class="section">
               
                 <h1 id="in-deep">In deep</h1>
-<p>In this section, we will show how to use advanced parameters with HMAX.<br />
-If you haven't read yet, you should start by the <a href="/get-started">Get started</a> section.</p>
+<p>In this section, we will show how to use advanced parameters in HMAX.<br />
+If you haven't read it yet, you should start with the <a href="/get-started">Get started</a> section.</p>
 <h2 id="how-to-specify-parameters">How to specify parameters</h2>
-<p>There is two way to pass parameters to the program:</p>
+<p>There is two ways to set parameters in the program:</p>
 <ol>
 <li>Directly through the Matlab command</li>
 <li>From a configuration file</li>
 </ol>
-<p>The priority is:
-1. Parameters given to the command
+<p>The priority is given to:
+1. Parameters set through the Matlab command
 2. Parameters written in the configuration file
 3. Parameters set internally</p>
-<p>That's why in the <a href="/get-started">Get started</a> section, we wrote this:</p>
+<p>That's why in the <a href="/get-started">Get started</a> section, we wrote:</p>
 <pre><code class="matlab">hmax('../dataset/train/', 'Train', true);
 </code></pre>
 
-<p>The <code>Train</code> parameters is set to <code>false</code> internally and in the default configuration file.<br />
-But as we give the value <code>true</code> as an argument, it will override the default value.</p>
+<p>The <code>Train</code> parameter is set to <code>false</code> internally and in the default configuration file.<br />
+Setting the parameter to <code>true</code> will override the default value.</p>
 <h2 id="avalaible-parameters">Avalaible parameters</h2>
 <table>
 <thead>
@@ -192,7 +192,7 @@ But as we give the value <code>true</code> as an argument, it will override the 
 </tr>
 <tr>
 <td>GaborNbOrientations</td>
-<td></td>
+<td>Number of Gabor filter orientations</td>
 <td>Integer</td>
 <td><code>4</code></td>
 </tr>
