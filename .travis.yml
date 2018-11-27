@@ -4,7 +4,7 @@ python: 3.6.6 # Set the version of Python to use
 
 branches: master # Set the branch to build from
 
-install:d
+install:
     - pip install mkdocs pymdown-extensions # Install the required dependencies
 
 before_deploy:
