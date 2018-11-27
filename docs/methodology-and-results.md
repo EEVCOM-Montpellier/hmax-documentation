@@ -1,6 +1,8 @@
-# Methodology and results
+# Performance test with Caltech101
 
-The HMAX efficiency and its different extensions available in literature are compare through the Caltech101 dataset, which you can find [here](http://www.vision.caltech.edu/Image_Datasets/Caltech101/).
+We compared our version of HMAX (Renoult et al. 2019) to that provided by Thomas Serre's Lab, available here: 
+
+of efficiency and its different extensions available in literature are compare through the Caltech101 dataset, which you can find [here](http://www.vision.caltech.edu/Image_Datasets/Caltech101/).
 This dataset contains 102 categories, each one including between 31 and more than 800 images.
 
 As we want a multi-class classifier, we need a balanced dataset. That's why we only take the first 31 images for all the categories.
