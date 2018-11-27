@@ -8,6 +8,7 @@ This dataset contains 102 categories, which include between 31 and more than 800
 
 Analyses were performed with the 102 categories, and with a reduced database of only 20 categories. 
 The Caltech20 dataset contained the following categories:
+
 |            |                 |             |               |
 |------------|-----------------|-------------|---------------|
 | Airplanes  | Electric guitar | Hedgehog    | Minaret       |
