@@ -1,26 +1,26 @@
 # In deep
 
-In this section, we will show how to use advanced parameters with HMAX.  
-If you haven't read yet, you should start by the [Get started](/get-started) section.
+In this section, we will show how to use advanced parameters in HMAX.  
+If you haven't read it yet, you should start with the [Get started](/get-started) section.
 
 ## How to specify parameters
 
-There is two way to pass parameters to the program:
+There is two ways to set parameters in the program:
 
 1. Directly through the Matlab command
 2. From a configuration file
 
-The priority is:
-1. Parameters given to the command
+The priority is given to:
+1. Parameters set through the Matlab command
 2. Parameters written in the configuration file
 3. Parameters set internally
 
-That's why in the [Get started](/get-started) section, we wrote this:
+That's why in the [Get started](/get-started) section, we wrote:
 ```matlab
 hmax('../dataset/train/', 'Train', true);
 ```
-The `Train` parameters is set to `false` internally and in the default configuration file.  
-But as we give the value `true` as an argument, it will override the default value.
+The `Train` parameter is set to `false` internally and in the default configuration file.  
+Setting the parameter to `true` will override the default value.
 
 ## Avalaible parameters
 
@@ -32,7 +32,7 @@ But as we give the value `true` as an argument, it will override the default val
 | Parallel                  | Use parallel computing              | Boolean            | `false`                      |
 | Engine                    | Specify an algorithm to use         | String             | `"sparseCodingColor"`              |
 | ImageSize                 | Resize image to this size in pixels | Integer            | `140`                        |
-| GaborNbOrientations       |                                     | Integer            | `4`                          |
+| GaborNbOrientations       | Number of Gabor filter orientations | Integer            | `4`                          |
 | GaborAspectRatio          | Aspect ratio of Gabor filters       | Float              | `0.3`                        |
 | GaborEffectiveWidth       | Width of Gabor filters              | Float[]            | `[2.8, 3.6, 4.5, ..., 18.2]` |
 | GaborWavelength           | Wavelength of Gabor filters         | Float[]            | `[3.5, 4.6, 5.6, ..., 22.8]` |
