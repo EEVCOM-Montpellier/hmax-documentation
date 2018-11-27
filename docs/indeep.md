@@ -32,16 +32,16 @@ Setting the parameter to `true` will override the default value.
 | Parallel                  | Use parallel computing              | Boolean            | `false`                      |
 | Engine                    | Specify an algorithm to use         | String             | `"sparseCodingColor"`              |
 | ImageSize                 | Resize image to this size in pixels | Integer            | `140`                        |
-| GaborNbOrientations       | Number of Gabor filter orientations | Integer            | `4`                          |
+| GaborNbOrientations       | Nb. of oritentions for Gabor filters| Integer            | `4`                          |
 | GaborAspectRatio          | Aspect ratio of Gabor filters       | Float              | `0.3`                        |
 | GaborEffectiveWidth       | Width of Gabor filters              | Float[]            | `[2.8, 3.6, 4.5, ..., 18.2]` |
 | GaborWavelength           | Wavelength of Gabor filters         | Float[]            | `[3.5, 4.6, 5.6, ..., 22.8]` |
 | GaborSizes                | Sizes of Gabor filters              | Integer[]          | `[7, 9, 11, 13, ..., 39]`    |
-| FiltersSizes              |                                     | Integer[]          | `[4, 8, 12, 16]`             |
+| FiltersSizes              | Sizes of S2 filters                 | Integer[]          | `[4, 8, 12, 16]`             |
 | MaxPoolingSizes           | Size of the max pooling             | Integer[]          | `[8, 8, 10, 10, ..., 22]`    |
-| ColorNbChannels           | Number of color channels            | Integer            | `4`                          |
-| SparseCodingFilterSize    |                                     | Integer            | `12`                         |
-| SparseCodingNbPatches     |                                     | Integer            | `10000`                      |
+| ColorNbChannels           | Nb. of color channels               | Integer            | `4`                          |
+| SparseCodingFilterSize    | Sizes of S2 filters (sparse HMAX)   | Integer            | `12`                         |
+| SparseCodingNbPatches     | Nb. of patches extracted (sparse HMAX)| Integer            | `10000`                      |
 | SparseCodingBatchSize     |                                     | Integer            | `1000`                       |
 | SparseCodingNbIterations  |                                     | Integer            | `2`                          |
 | SparseCodingPenalty       |                                     | Float              | `0.2`                        |
