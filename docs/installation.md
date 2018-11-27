@@ -1,21 +1,21 @@
 # Installation
 
-HMAX is written in [Matlab](https://mathworks.com/). Matlab is a proprietary software so you must have a Matlab licence.
+HMAX is written in [Matlab](https://mathworks.com/). Matlab is a proprietary software, thus you must have a Matlab licence.
 
-Plus, in order to run HMAX, you must have theses Toolboxes:
+In addition, you will need the following Toolboxes to run this version of HMAX:
 
 | Requirement                                              |
 |----------------------------------------------------------|
 | Matlab >2017                                             |
 | Optimization toolbox                                     |
 | Parallel Computing Toolbox (optional)                   |
-| Global Optimization Toolbox (sparse coding only)         |
-| Statistics and Machine Learning Toolbox (classification) |
+| Global Optimization Toolbox (for sparse coding only)         |
+| Statistics and Machine Learning Toolbox ( for image classification only) |
 
 Then download the code through git: 
 ```bash
 git clone https://github.com/EEVCOM-Montpellier/HMAX
 ```
 
-Or download it directly:  
+Or download it directly at:  
 [https://github.com/EEVCOM-Montpellier/HMAX/archive/master.zip](https://github.com/EEVCOM-Montpellier/HMAX/archive/master.zip)
