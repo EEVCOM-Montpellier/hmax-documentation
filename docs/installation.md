@@ -1,6 +1,6 @@
 # Installation
 
-HMAX is written in [Matlab](https://mathworks.com/). Matlab is a proprietary software, thus you must have a Matlab licence.
+HMAX is written in [Matlab](https://mathworks.com/). Matlab is a proprietary software; thus you must have a Matlab licence.
 
 In addition, you will need the following Toolboxes to run this version of HMAX:
 
