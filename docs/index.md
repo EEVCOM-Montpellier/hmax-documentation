@@ -9,7 +9,7 @@ If you have already downloaded the package, go [here](/get-started/) to start us
 
 HMAX is a computational model of information processing in the *ventral pathway* of the visal cortex, which is involved in colour and shape perception. The model was proposed originally by Riesenhuber & Poggio (1999).
 
-## What is new in this version of HMAX?
+## What is new in this version?
 
 This version of HMAX offers high flexibility in parameter setting and thus can be easily tuned to model the perception of colour patterns in a wide array of Vertebrate species. Furthermore, it is possible to learn filters (i.e. neuronal selectivities) using a sparseness constraint, or to force sparseness when coding an image with a given set of filters. As in the version proposed by Zhang et al. (2012), it can process greyscale or colour images; however, it is up to 25% faster. Renoult et al. (2019) provides a complete description of the model. 
 
