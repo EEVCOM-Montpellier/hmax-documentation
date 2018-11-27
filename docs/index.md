@@ -11,7 +11,7 @@ HMAX is a computational model of information processing in the *ventral pathway*
 
 ## What is new in this version?
 
-This version of HMAX offers high flexibility in parameter setting and thus can be easily tuned to model the perception of colour patterns in a wide array of Vertebrate species. Furthermore, it is possible to learn filters (i.e. neuronal selectivities) using a sparseness constraint, or to force sparseness when coding an image with a given set of filters. As in the version proposed by Zhang et al. (2012), it can process greyscale or colour images; however, it is up to 25% faster. Renoult et al. (2019) provides a complete description of the model. 
+This version of HMAX offers high flexibility in parameter setting and thus can be easily tuned to model the perception of colour patterns in a wide array of Vertebrate species. This package also includes sparse-HMAX, an extension of HMAX with a sparse coding scheme, as an attempts to make the model even more biologically realistic and to provide a tool for estimating efficiency in information processing. As in the version proposed by Zhang et al. (2012), it can process greyscale or colour images; however, it is up to 25% faster. Renoult et al. (2019) provides a complete description of the model. 
 
 ## References
 Mutch, J., & Lowe, D. G. (2006). Multiclass object recognition with sparse, localized features. In Computer Vision and Pattern Recognition, 2006 IEEE Computer Society Conference on (Vol. 1, pp. 11-18). IEEE.
