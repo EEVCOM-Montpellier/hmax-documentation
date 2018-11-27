@@ -7,7 +7,7 @@ If you have already downloaded the package, go [here](/get-started/) to start us
 
 ## What is HMAX?
 
-HMAX is a computational model of information processing in the *ventral pathway* of the visal cortex, which is involved in colour and shape perception. The model was originally proposed by Riesenhuber & Poggio (1999).
+HMAX is a computational model of information processing in the *ventral pathway* of the visal cortex, which is involved in colour and shape perception. The model was proposed originally by Riesenhuber & Poggio (1999).
 
 ## What is new in this version of HMAX?
 
