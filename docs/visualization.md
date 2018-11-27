@@ -1,4 +1,4 @@
 # Visualization
 
-For visualize the different activations cards, you can use functions available in the `helpers.display` package.
+To visualize the different activations maps, use functions available in the `helpers.display` package.
 
