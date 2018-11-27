@@ -1,6 +1,6 @@
 # In deep
 
-In this section, we will show how to use advanced parameters in HMAX.  
+In this section, we will show how to use advanced parameter setting in HMAX.  
 If you haven't read it yet, you should start with the [Get started](/get-started) section.
 
 ## How to specify parameters
