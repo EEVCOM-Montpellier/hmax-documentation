@@ -3,7 +3,7 @@
 Welcome to the documentation of HMAX (version Renoult et al. 2019).
 
 For instructions about how to install the MATLAB package, go [here](/installation/).  
-If you have already downloaded it, go [here](/get-started/).
+If you have already downloaded the package, go [here](/get-started/) to start using it.
 
 ## What is HMAX?
 
