@@ -42,10 +42,10 @@ Setting the parameter to `true` will override the default value.
 | ColorNbChannels           | Nb. of color channels               | Integer            | `4`                          |
 | SparseCodingFilterSize    | Sizes of S2 filters (sparse HMAX)   | Integer            | `12`                         |
 | SparseCodingNbPatches     | Nb. of patches extracted (sparse HMAX)| Integer            | `10000`                      |
-| SparseCodingBatchSize     |                                     | Integer            | `1000`                       |
-| SparseCodingNbIterations  |                                     | Integer            | `2`                          |
-| SparseCodingPenalty       |                                     | Float              | `0.2`                        |
-| NbFilters                 |                                     | Integer            | `1000`                       |
+| SparseCodingBatchSize     | Nb. of patches in one batch during filter learning (sparse HMAX)| Integer            | `1000`                       |
+| SparseCodingNbIterations  | Nb. of iterations during filter learning (sparse HMAX)| Integer            | `2`                          |
+| SparseCodingPenalty       | Importance given to sparseness versus reconstruction error (sparse HMAX)| Float              | `0.2`                        |
+| NbFilters                 | Nb. of S2 fitlers (sparse HMAX)| Integer            | `1000`                       |
 | Train                     | Train the model                     | Boolean            | `false`                      |
 
 
