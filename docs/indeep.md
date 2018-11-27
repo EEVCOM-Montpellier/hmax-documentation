@@ -33,7 +33,7 @@ Setting the parameter to `true` will override the default value.
 | Engine                    | Specify an algorithm to use         | String             | `"sparseCodingColor"`              |
 | ImageSize                 | Resize image to this size in pixels | Integer            | `140`                        |
 | GaborNbOrientations       | Nb. of oritentions for Gabor filters| Integer            | `4`                          |
-| GaborAspectRatio          | Aspect ratio of Gabor filters       | Float              | `0.3`                        |
+| GaborAspectRatio          | Spatial aspect ratio of Gabor filters| Float              | `0.3`                        |
 | GaborEffectiveWidth       | Width of Gabor filters              | Float[]            | `[2.8, 3.6, 4.5, ..., 18.2]` |
 | GaborWavelength           | Wavelength of Gabor filters         | Float[]            | `[3.5, 4.6, 5.6, ..., 22.8]` |
 | GaborSizes                | Sizes of Gabor filters              | Integer[]          | `[7, 9, 11, 13, ..., 39]`    |
@@ -50,10 +50,10 @@ Setting the parameter to `true` will override the default value.
 
 
 ### Engine 
-Choose between: **classic**, **sparseCoding**, **color** or **sparseColor**
+Choose between: **classic** (HMAX with greyscale images), **sparseCoding** (HMAX with sparse coding), **color** (HMAX with colour images) or **sparseColor** (HMAX with sparse coding on colour images)
 
 ### ImageSize
-The program will alway resize input images, so the size will be uniform. Bigger they are, slower the execution will be.
+Input images are resized to have their smallest side equal to the defined value keeping aspect ration constant. Large images increase computation time.
 
 ### GaborEffectiveWidth
 Default values: `[2.8, 3.6, 4.5, 5.4, 6.3, 7.3, 8.2, 9.2, 10.2, 11.3, 12.3, 13.4, 14.6, 15.8, 17.0, 18.2]`
