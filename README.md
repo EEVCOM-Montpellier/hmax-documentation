@@ -17,13 +17,9 @@ In order to contribute, you need to have the following installed:
 | PyMdown Extensions | ≥ 4.11.        |
 
 1. Install [Python](https://www.python.org) on your computer
-2. In a terminal, use `pip` to install MkDocs:
+2. In a terminal, use `pip` to install MkDocs and PyMdown Extensions:
     ```bash
-    pip install mkdocs
-    ```
-3. In the same way, install PyMdown Extensions
-    ```bash
-    pip install pymdown-extensions
+    pip install mkdocs pymdown-extensions
     ```
 
 Preview
@@ -35,7 +31,11 @@ You can serve locally the documentation by running in your terminal:
 mkdocs serve
 ```
 
-Deploy on Github:
-```
-mkdocs gh-deploy
-```
+The documentation is automatically deploy when push on the branch master.
+
+Write documentation
+-------------------
+
+Pages are written in [Markdown](https://daringfireball.net/projects/markdown/) in the `docs` folder.
+
+In order to add a new page, add a `.md` file in the `docs` folder and add the new entry in the [mkdocs.yml](/mkdocs.yml) file, in the pages section.
