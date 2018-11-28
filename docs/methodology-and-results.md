@@ -21,16 +21,16 @@ Images were resized to 140 pix for the smallest side, keeping the aspect ratio u
 
 ## Results - Caltech 20
 
-|                             | Renoult et al. | Serre et al. | Renoult et al. | Serre et al. | Renoult et al. |
-|-----------------------------|----------------|--------------|----------------|--------------|----------------|
-| Engine                      | Classic        | Gray         | Color          | Color DO     | Sparse coding  |
-| Correct classification rate | 57.14%         | 58.57%       | 64.29%         | 50.71%       | 45.71%         |
-| Execution time              | 57m25s         | 1h16m16s     | 13h28m22s      | 11h09m34s    | 2h48m00s        |
+|                        | Renoult et al. | Serre et al. | Renoult et al. | Serre et al. | Renoult et al. | Renoult et al.     |
+|------------------------|----------------|--------------|----------------|--------------|----------------|--------------------|
+| Engine                 | Classic        | Gray         | Color          | Color DO     | Sparse coding  | Sparse coding color|
+| Correct classification | 57.14%         | 58.57%       | 64.29%         | 50.71%       | 45.71%         | 53.57%             |
+| Execution time         | 57m25s         | 1h16m16s     | 13h28m22s      | 11h09m34s    | 2h48m00s       | 9h23m42s           |
 
 ## Results - Caltech 101
 
-|                             | Renoult et al. | Serre et al. | Renoult et al. | Serre et al. | Renoult et al. |
-|-----------------------------|----------------|--------------|----------------|--------------|----------------|
-| Engine                      | Classic        | Gray         | Color          | Color DO     | Sparse coding  |
-| Correct classification rate | 31.79%         | 27.45%       | 29.55%         | 25.63%       | --.--%         |
-| Execution time              | 4h38m33s       | 6h4m8s       | 2d21h22m2s     | 2d4h11m30s   | -h--m--s       |
+|                        | Renoult et al. | Serre et al. | Renoult et al. | Serre et al. | Renoult et al. | Renoult et al.     |
+|------------------------|----------------|--------------|----------------|--------------|----------------|--------------------|
+| Engine                 | Classic        | Gray         | Color          | Color DO     | Sparse coding  | Sparse coding color|
+| Correct classification | 31.79%         | 27.45%       | 29.55%         | 25.63%       | 18.77%         | 23.11%             |
+| Execution time         | 4h38m33s       | 6h4m8s       | 2d21h22m2s     | 2d4h11m30s   | 4h52m30        | 20h53m43           |
