@@ -3,7 +3,9 @@ pages:
   - Home: index.md
   - Installation: installation.md
   - 'Get started': get-started.md
-  - 'In deep': indeep.md
+  - 'Learn dictionnaries': learn-dictionnaries.md
+  - 'Custom parameters': custom-parameters.md
+  - 'Machine Learning': machine-learning.md
   - 'Methodology and results': methodology-and-results.md
   - Visualization: visualization.md
 theme:
