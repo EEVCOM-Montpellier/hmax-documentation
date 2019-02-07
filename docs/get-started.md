@@ -54,3 +54,10 @@ averagePrecision = classifier.runtest(trainedModel, Ttest)
 ## Go further
 
 Now that you know how to run HMAX, we will see how to run the code with GPU, parallel computing, with your own parameters, etc ...
+
+In case you stop prematurely the execution, you may have a text that continues to appear.  
+To stop it, just run the following:
+```matlab
+stop(timerfind)
+```
+
