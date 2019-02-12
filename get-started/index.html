@@ -67,13 +67,11 @@
     
         <ul>
         
-            <li><a class="toctree-l3" href="#prepare-your-dataset">Prepare your dataset</a></li>
-        
             <li><a class="toctree-l3" href="#quick-start">Quick start</a></li>
         
-            <li><a class="toctree-l3" href="#machine-learning">Machine Learning</a></li>
+            <li><a class="toctree-l3" href="#troubleshouting">Troubleshouting</a></li>
         
-            <li><a class="toctree-l3" href="#go-further">Go further</a></li>
+            <li><a class="toctree-l3" href="#whats-next">What's next?</a></li>
         
         </ul>
     
@@ -83,7 +81,17 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../indeep/">In deep</a>
+    <a class="" href="../learn-dictionnaries/">Learn dictionnaries</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../custom-parameters/">Custom parameters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../machine-learning/">Machine Learning</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -129,47 +137,36 @@
             <div class="section">
               
                 <h1 id="get-started">Get started</h1>
-<p>This section will show you how to run the code to classify images.</p>
-<h2 id="prepare-your-dataset">Prepare your dataset</h2>
-<p>First, you must prepare your dataset.<br />
-HMAX requires a learning step during which filter selectivities are learned. You thus need to have a learning dataset, which can be different (or not) from the encoding dataset. The encoding dataset includes images that you want to encode using HMAX with learned filters.</p>
+<p>This section will show you how to process images with the HMAX algorithm.</p>
 <h2 id="quick-start">Quick start</h2>
-<p>This will show you how to run HMAX with the default configuration. Computations are not paralyzed or putted on the GPU.<br />
-You should do this on a small dataset first as it can take some time.</p>
-<p>1 . Open the project with Matlab.</p>
-<p>2 . Then, you need to train the model with the dataset you have prepared</p>
-<pre><code class="matlab">hmax('../dataset/train/', 'Train', true);
+<p>HMAX needs a dictionnary of high level filters (later HLFilters) in order to work.<br />
+Renoult and al. HMAX come with pre-build dictionnaries, so that you will easely process your images.</p>
+<p>Theses steps bellow run Renoult HMAX with the default configuration and dictionnany:</p>
+<ol>
+<li>
+<p>Open the project with Matlab.</p>
+</li>
+<li>
+<p>Run the code on your images</p>
+</li>
+</ol>
+<pre><code class="matlab">hmax('path/to/your/images');
 </code></pre>
 
-<p>3 . Run it on your test dataset</p>
-<pre><code class="matlab">hmax('../dataset/test/');
-</code></pre>
-
-<p>This will read recursively the <code>../dataset/test/</code> folder architecture and create a similar one in the <code>./result</code> folder.<br />
+<p>This will read recursively the <code>path/to/your/images</code> folder architecture and create a similar one in the <code>./result</code> folder.<br />
 Each images will give a Matlab binary file containing the HMAX encoding.</p>
-<p>4 . If your folders are named corresponding to the class name of the images, then you can run the following command:</p>
-<pre><code class="matlab">T = classifier.loadC2s('./results/');
+<h2 id="troubleshouting">Troubleshouting</h2>
+<p><strong>The code doesn't run because I don't have the Parallelization package</strong>
+You can still run it by specifiyng that you don't want to use parallelization:</p>
+<pre><code class="matlab">hmax('path/to/your/images', 'Parallel', false);
 </code></pre>
 
-<p>Where <code>T</code> is a table containing HMAX encodings with corresponding labels.</p>
-<h2 id="machine-learning">Machine Learning</h2>
-<p>Once you've done the step <code>4.</code>, you can use the data in a Machine Learning tool.<br />
-The recommendation is to split the data (<code>T</code>) in two, one with <em>80%</em> of the observations for training and the other with the rest of the <em>20%</em> for validation.  </p>
-<pre><code class="matlab">[Ttrain Ttest] = classifier.splitdata(T, 0.8);
-</code></pre>
-
-<p>Then, you can use the Classification Learner toolbox to create a model.<br />
-For our tests, we used a Linear SVM without PCA.</p>
-<p>Finally, we can test our model</p>
-<pre><code class="matlab">averagePrecision = classifier.runtest(trainedModel, Ttest)
-</code></pre>
-
-<h2 id="go-further">Go further</h2>
-<p>Now that you know how to run HMAX, we will see how to run the code with GPU, parallel computing, with your own parameters, etc ...</p>
-<p>In case you stop prematurely the execution, you may have a text that continues to appear.<br />
-To stop it, just run the following:</p>
-<pre><code class="matlab">stop(timerfind)
-</code></pre>
+<h2 id="whats-next">What's next?</h2>
+<ul>
+<li>Learn a custom HLFilter dictonnary: <a href="/learn-dictionnaries.md">Learn dictionnaries</a></li>
+<li>Learn how to use custom parameters: <a href="/custom-parameters.md">Custom parameters</a></li>
+<li>Use Machine Learning tools: <a href="/machine-learning.md">Machine Learning</a></li>
+</ul>
               
             </div>
           </div>
@@ -177,7 +174,7 @@ To stop it, just run the following:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../indeep/" class="btn btn-neutral float-right" title="In deep">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../learn-dictionnaries/" class="btn btn-neutral float-right" title="Learn dictionnaries">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../installation/" class="btn btn-neutral" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -209,7 +206,7 @@ To stop it, just run the following:</p>
         <span><a href="../installation/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../indeep/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../learn-dictionnaries/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
