@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-# Visualization
-
-To visualize the different activations maps, use functions available in the `helpers.display` package.
-
-=======
 # Visualization
 
 To visualize the different activations maps, use functions available in the `helpers.display` package.
@@ -23,4 +17,3 @@ This result in this type of figure:
 The same thing after the max pooling:
 
 ![C1 Figure](images/c1.jpg)
->>>>>>> 83334026400461a87174f8be35f1a2056efd380f

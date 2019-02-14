@@ -21,7 +21,7 @@ Each images will give a Matlab binary file containing the HMAX encoding.
 
 ## Troubleshouting 
 
-**The code doesn't run because I don't have the Parallelization package**
+**The code doesn't run because I don't have the Parallelization package**  
 You can still run it by specifiyng that you don't want to use parallelization:
 ```matlab
 hmax('path/to/your/images', 'Parallel', false);
