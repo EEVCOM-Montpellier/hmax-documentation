@@ -130,12 +130,15 @@
 <p>To learn a new dictionnary, you must:</p>
 <ul>
 <li>Turn the train option to <code>true</code></li>
-<li>Specify a file name, with <code>.mat</code> extension</li>
+<li>Specify a file name, with <code>.mat</code> extension, where to save the dictionnary</li>
 <li>Give the train dataset</li>
 </ul>
 <p><strong>Exemple</strong></p>
 <pre><code class="matlab">hmax('your/train/dataset', 'Train', true, 'HLFiltersLocation', './data/my-custom-dictionnary.mat')
 </code></pre>
+
+<p>You must use the same <code>Engine</code> in the training and the execution session.<br />
+I.e., if you learn a <code>sparseCoding</code> dictionnary, you must execute a <code>sparseCoding</code> encoding, you can't use this dictionnary with <code>classic</code>, <code>color</code> or even <code>sparseColor</code>.</p>
               
             </div>
           </div>
